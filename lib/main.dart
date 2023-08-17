@@ -1,16 +1,26 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import '../components/homepage.dart';
+import 'server.dart';
 
 void main() {
-  runApp(const MyApp());
+  mainServer();
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+  int x = max(10, 20);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Homepage());
+    return MaterialApp(
+      home: Homepage(),
+    );
   }
 }
